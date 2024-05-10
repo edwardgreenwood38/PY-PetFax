@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- h:/NC State code/PY-PetFax/petfax/templates/show.html -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PetFax - {{ pet.pet_name }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <h1>{{ pet.pet_name }}</h1>
+
+        <div>
+            <a href="/pets/">Back</a>
+        </div>
+
+        <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}" width="400">
+        
+    </body>
+    
+</html>
