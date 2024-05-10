@@ -16,7 +16,10 @@
     <body>
         <h1>Welcome to PetFax</h1>
 
-        <p>First web page with a template.</p>
+        {% for pet in pets %}
+            <h2>{{ pet.pet_name }}</h2>
+            <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}">
+        {% endfor %}
     </body>
     
 </html>
