@@ -1,0 +1,25 @@
+
+/* index */
+.layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout div {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+/* show */
+.petView {
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.petView div {
+    padding: 10px;
+    border: 1px solid blue;
+    background-color: aqua;
+}

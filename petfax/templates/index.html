@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+<html lang="en">
 
-    <body>
-        <h1>Welcome to PetFax</h1>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/petfax.css') }}">
+</head>
+
+<body>
+    <h1>Welcome to PetFax</h1>
+
+    <div class="layout">
         {% for pet in pets %}
-            <h2>{{ pet.pet_name }}</h2>
             <div>
-                <a href="/pets/{{ pet.pet_id }}">Facts</a>
+                <h2>{{ pet.pet_name }}</h2>
+                <div>
+                    <a href="/pets/{{ pet.pet_id }}">Facts</a>
+                </div>
+                <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}" width="250">
             </div>
-            <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}" width="250">
         {% endfor %}
-    </body>
-    
+    </div>
+
+</body>
+
 </html>
